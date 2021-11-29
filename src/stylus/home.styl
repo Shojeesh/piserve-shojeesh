@@ -1,0 +1,151 @@
+
+@import 'base/_mixins.styl'
+@import 'base/_variables.styl'
+
+.homeBanner
+	width 100%
+	display flex
+	align-items flex-start
+	.hbLeft
+		display none
+		+mq(medium)
+			display block
+			width 230px
+			height 904px
+		img
+			width 100%
+			height inherit
+			object-fit cover
+	.hbRight
+		width 100%
+		height 600px
+		display flex
+		align-items flex-start
+		justify-content flex-end
+		position relative
+		margin-top 75px
+		+mq(small)
+			height 960px
+		+mq(medium)
+			width calc(100% - 145px)
+			margin-left -85px
+			margin-top 120px
+	.hbRightImg
+		width 100%
+		height 600px
+		+mq(small)
+			padding-left 310px
+			height 950px
+		img
+			width 100%
+			height inherit
+			object-fit cover
+	.hbContent
+		width calc(100% - 40px)
+		height 500px
+		background rgba(255, 255, 255, 0.85)
+		position absolute
+		top 40px
+		left 20px
+		display flex
+		align-items center
+		taJustify-content center
+		padding 30px 60px
+		+mq(small)
+			background #fff
+			top 100px
+			width 470px
+			height 700px
+			left 0
+			padding 30px 100px
+		+mq(medium)
+			width 568px
+			height 752px
+	.hbContentIn
+		width 100%
+		max-width 270px
+		margin 0 auto
+.homeTitle
+	font-weight 600
+	font-size 40px
+	line-height 45px
+	color #122B56
+	margin 25px 0
+	+mq(small)
+		font-size 56px
+		line-height 64px
+		margin 48px 0
+	span
+		margin-left 40px
+h2.homeTitle
+	font-size 30px
+	line-height 38px
+	+mq(small)
+		font-size 40px
+		line-height 48px
+.homeTitleHelper
+	font-weight bold
+	font-size 12px
+	line-height 12px
+	letter-spacing 0.04em
+	color #122B56
+	position relative
+	padding-left 40px
+	&:before
+		content ''
+		position absolute
+		top 6px
+		left 0
+		width 32px
+		height 1px
+		background #122B56
+.homeDesc
+	font-size 14px
+	line-height 32px
+	color #122B56
+	margin-bottom 25px
+	+mq(small)
+		font-size 16px
+		margin-bottom 48px
+.homeLink
+	font-weight bold
+	font-size 12px
+	line-height 12px
+	letter-spacing 0.04em
+	color #122B56
+.homeKnowus
+	width 100%
+	margin-top 104px
+	margin-bottom 120px
+.homeKnowusIn
+	padding 0 15px
+	+mq(medium)
+		margin 0 auto
+		max-width 1144px
+		align-items center
+		display flex
+	+mq(large)
+		padding 0
+.hnuLeft
+	+mq(medium)
+		width 70%
+		padding-right 136px
+	.homeDesc
+		+mq(small)
+			margin-left 45px
+	.homeLink
+		+mq(small)
+			margin-left  45px
+.hnuRight
+	height 350px
+	margin-top 30px
+	+mq(small)
+		height 568px
+	+mq(medium)
+		width 30%
+		height 568px
+		margin-top 0
+	img
+		width 100%
+		height inherit
+		object0fit cover

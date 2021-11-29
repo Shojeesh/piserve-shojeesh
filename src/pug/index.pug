@@ -1,0 +1,22 @@
+include partials/main/head.pug
+doctype html
+html
+	+Head('Test', 'css/home.min.css')
+	body
+		#root
+			include partials/main/header.pug
+			main
+				include partials/banner.pug
+				.homeKnowus
+					.homeKnowusIn
+						.hnuLeft
+							p.homeTitleHelper KNOW US BETTER
+							h2.homeTitle
+								| Craft, design
+								br
+								span &amp; engineering—integrated.
+							p.homeDesc Gulf Craft is the world’s fully integrated boat and yacht manufacturer with a proven track-record in designing and delivering high-quality, super-performing vessels that define the contemporary marine lifestyleExcellence in boat/yacht manufacturing
+							a.homeLink(href='') LEARN MORE
+						.hnuRight
+							img(src='images/knowus.png' alt='')
+		include partials/main/foot.pug

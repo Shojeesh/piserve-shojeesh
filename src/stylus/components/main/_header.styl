@@ -1,0 +1,113 @@
+
+@import '../../base/_mixins'
+@import '../../base/_variables'
+
+header
+	width 100%
+	z-index 2
+	padding 10px 0
+	position fixed
+	top 0
+	left 0
+	background #fff
+	+mq(medium)
+		background transparent
+		padding 22px 0 25px 0
+		height 120px
+.headerInner
+	display flex
+	align-items center
+	justify-content space-between
+.brandLogo
+	display flex
+	align-items center
+	justify-content flex-start
+.headerMiddle
+	width 220px
+	height 100vh
+	position fixed
+	top 0
+	right 0
+	padding 20px
+	transform translateX(120%)
+	transition all 0.3s
+	z-index 2
+	background #fff
+	+mq(medium)
+		position relative
+		width auto
+		display flex
+		justify-content flex-end
+		align-items center
+		transform translateX(0)
+		padding 0
+		height auto
+		background transparent
+		margin-left 80px
+	&.isActive
+		transform translateX(0)
+.mainNav
+	+mq(medium)
+		text-align right
+		max-width 770px
+	a
+		color #000
+		font-size 1.5rem
+		flex 1
+		text-align left
+		display block
+		transition all 0.3s
+		&+a
+			margin-top 10px
+		+mq(medium)
+			text-align center
+			display inline-flex
+			align-items center
+			justify-content center
+			padding: 7px 0
+			&+a
+				margin-left 33px
+				margin-top 0
+		&:hover
+			+mq(medium)
+				opacity 0.6
+.burgerBlock
+	height 40px
+	display flex
+	align-items center
+	justify-content center
+	cursor pointer
+	padding-left 15px
+	+mq(medium)
+		display none
+.burger
+	width 22px
+	height 2px
+	background #000
+	position relative
+	&:before, &:after
+		content ''
+		position absolute
+		width 22px
+		height 2px
+		background #000
+	&:before
+		width 13px
+		top -6px
+		right 0
+	&:after
+		bottom -6px
+		left 0
+.drawerBackdrop
+	width 100%
+	height 100%
+	position fixed
+	top 0
+	left 0
+	right 0
+	bottom 0
+	background rgba(0, 0, 0, 0.45)
+	display none
+	z-index 1
+	&.isActive
+		display block

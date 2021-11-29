@@ -1,0 +1,26 @@
+
+
+// Media Queries
+
+extralarge = 1600px
+large = 1200px
+medium = 992px
+small = 769px
+tiny = 481px
+
+mxLarge = 1199px
+mxMedium = 991px
+mxSmall = 768px
+mxTiny = 480px
+
+
+
+mq(var)
+  condition = '(min-width: %s)' % var
+  @media condition
+    {block}
+    
+mqMax(var)
+  condition = '(max-width: %s)' % var
+  @media condition
+    {block}
